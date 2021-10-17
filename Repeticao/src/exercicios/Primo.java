@@ -1,6 +1,10 @@
 package exercicios;
 import java.util.Scanner;
 
+/*
+Criar um programa que receba um nuÌmero e diga se ele eÌ um nuÌmero primo.
+ */
+
 public class Primo {
 	
 	public static void main(String[] args) {
@@ -10,10 +14,10 @@ public class Primo {
 		int numero;
 		
 		do {
-			System.out.println("Digite um número inteiro positivo");
+			System.out.println("Digite um nÃºmero inteiro positivo");
 			numero = sc.nextInt();
 			if(numero <= 0) {
-				System.out.println("Número inválido");
+				System.out.println("NÃºmero invÃ¡lido");
 			}
 		}while(numero <= 0);
 
@@ -26,7 +30,7 @@ public class Primo {
 			}
 		}
 		
-		System.out.println(ePrimo? numero + " é primo." : numero + " não é primo.");
+		System.out.println(ePrimo? numero + " Ã© primo." : numero + " nÃ£o Ã© primo.");
 		sc.close();
 	}
 	

@@ -1,6 +1,13 @@
 package exercicios;
 import java.util.Scanner;
 
+/*
+Calcular média de X alunos.
+Notas válidas: entre 0 e 10
+Contar quantas notas válidas foram digitadas
+Usuário deve digitar -1 para sair do programa e ser informado da sua média e quantidade de notas
+ */
+
 public class WhileEx {
 
 	public static void main(String[] args) {
