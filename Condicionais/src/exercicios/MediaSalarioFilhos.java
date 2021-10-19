@@ -40,6 +40,6 @@ public class MediaSalarioFilhos {
 		System.out.println("A média do número de filhos é: " + (double) totalFilhos/20);
 		System.out.println("O maior salário é: " + maiorSalario);
 		System.out.println("O percentual de pessoas com salário de até $100,00 é: " + salarioAteCem* 100 / 20 + "%");
-		
+		sc.close();
 	}
 }
