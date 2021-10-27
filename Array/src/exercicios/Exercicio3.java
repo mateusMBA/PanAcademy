@@ -18,7 +18,6 @@ public class Exercicio3 {
 		Aluno aluno1 = new Aluno();
 		aluno1.setNome("Mateus");
 		aluno1.setNotas(notas);
-		
 		System.out.println("A maior nota de " + aluno1.getNome() + " é " + aluno1.maiorNota());
 		System.out.println("A média de " + aluno1.getNome() + " é "  + aluno1.media());
 		System.out.println(aluno1.aprovado() ? aluno1.getNome() + " foi aprovado!" : aluno1.getNome() + " foi reprovado :(");

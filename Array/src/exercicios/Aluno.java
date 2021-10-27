@@ -1,5 +1,7 @@
 package exercicios;
 
+import java.util.Arrays;
+
 public class Aluno {
 	
 	private String nome;
@@ -45,7 +47,4 @@ public class Aluno {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
-	
-
 }
