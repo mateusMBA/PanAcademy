@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Length;
 
@@ -24,8 +25,10 @@ private static final long serialVersionUID = 1L; //verificar para que serve
 	@Length(min = 3, max = 100, message = "Valor entre 3 e 100 caracteres")
 	private String nome;
 	
+	@NotNull
 	private Integer quantidade; //ver se pode usar tipo primitivo
 	
+	@NotNull
 	private Double preco;
 
 	public Produto(String nome, Integer quantidade, Double preco) {
