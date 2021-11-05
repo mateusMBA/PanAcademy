@@ -83,8 +83,10 @@ public class Medico {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id);
+		return Objects.hash(documentoProfissional, especialidade, id, nome, telefone);
 	}
+
+
 
 	@Override
 	public boolean equals(Object obj) {
@@ -95,8 +97,17 @@ public class Medico {
 		if (getClass() != obj.getClass())
 			return false;
 		Medico other = (Medico) obj;
-		return Objects.equals(id, other.id);
+		return Objects.equals(documentoProfissional, other.documentoProfissional)
+				&& Objects.equals(especialidade, other.especialidade) && Objects.equals(id, other.id)
+				&& Objects.equals(nome, other.nome) && Objects.equals(telefone, other.telefone);
 	}
+
+	
+	
+
+
+
+	
 	
 	
 	

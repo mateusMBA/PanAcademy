@@ -11,30 +11,30 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.mongodb.model.Agendamento;
-import com.example.mongodb.service.AgendamentoService;
+import com.example.mongodb.model.Medico;
+import com.example.mongodb.service.MedicoService;
 
 @RestController
-@RequestMapping(path = "/agendamentos")
-public class AgendamentoController {
-	
+@RequestMapping(path = "/medicos")
+public class MedicoController {
+
 	@Autowired
-	private AgendamentoService agendamentoService;
+	private MedicoService medicoService;
 
 	@GetMapping
-	public List<Agendamento> mostrarTodosAgendamentos() {
-		return this.agendamentoService.mostrarTodosAgendamentos();
+	public List<Medico> mostrarTodosMedicos() {
+		return this.medicoService.mostrarTodosMedicos();
 }
 
 	@GetMapping(value = "/{id}")
-	public ResponseEntity<Agendamento> mostratAgendamentoPorId(@PathVariable String id) {
-		Agendamento obj = this.agendamentoService.mostrarAgendamentoPorId(id);
+	public ResponseEntity<Medico> mostraMedicoPorId(@PathVariable String id) {
+		Medico obj = this.medicoService.mostrarMedicoPorId(id);
 		return ResponseEntity.ok().body(obj);
 	}
 	
 	@PostMapping
-	public Agendamento criarAgendamento(@RequestBody Agendamento agendamento) {
-		return this.agendamentoService.criarAgendamento(agendamento);
+	public Medico criarmedico(@RequestBody Medico medico) {
+		return this.medicoService.criarMedico(medico);
 	}
-
+	
 }

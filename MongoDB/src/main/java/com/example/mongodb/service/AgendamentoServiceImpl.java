@@ -20,25 +20,25 @@ public class AgendamentoServiceImpl implements AgendamentoService {
 	MedicoRepository medicoRepository;
 	
 	@Override
-	public List<Agendamento> obterTodos(){
+	public List<Agendamento> mostrarTodosAgendamentos(){
 		return this.agendamentoRepository.findAll();
 	}
 	
 	@Override
-	public Agendamento obterPorCod(String cod) {
+	public Agendamento mostrarAgendamentoPorId(String cod) {
 		return this.agendamentoRepository
 				.findById(cod)
 				.orElseThrow(() -> new IllegalArgumentException("Agendamento inexistente!"));
 	}
 	
 	@Override
-	public Agendamento criar(Agendamento agendamento) {
+	public Agendamento criarAgendamento(Agendamento agendamento) {
 		
 		Medico medico = this.medicoRepository
 				.findById(agendamento.getMedico().getId())
-				.orElseThrow(() -> new IllegalArgumentException("médico inexistente"));
+				.orElseThrow(() -> new IllegalArgumentException("Médico inexistente"));
 		agendamento.setMedico(medico);
-				
+		return this.agendamentoRepository.save(agendamento);
 	}
 	
 	

@@ -60,7 +60,7 @@ public class Agendamento implements Serializable {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(data, id);
+		return Objects.hash(data, id, medico);
 	}
 
 	@Override
@@ -72,8 +72,10 @@ public class Agendamento implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		Agendamento other = (Agendamento) obj;
-		return Objects.equals(data, other.data) && Objects.equals(id, other.id);
+		return Objects.equals(data, other.data) && Objects.equals(id, other.id) && Objects.equals(medico, other.medico);
 	}
+
+	
 	
 	
 
